@@ -1,0 +1,25 @@
+body {
+  padding-top: 2em;
+}
+
+section, h4, h2 {
+  text-align: center;
+}
+
+#switches {
+  width: 239px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#switches > label {
+  margin-bottom: 1em;
+}
+
+input[type=text] {
+  max-width: 600px;
+}
+
+.untouched {
+  opacity: .6
+}

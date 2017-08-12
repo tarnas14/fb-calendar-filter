@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>Facebook ical filter</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"/>
+    <!-- <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css"> -->
+    <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome.css"/>
+    <link rel="stylesheet" href="/style.css"/>
+    <link rel="stylesheet" href="/switch.css"/>
+  </head>
+  <body>
+    <header class="container">
+      <h2>Facebook - filter - Google Calendar</h2>
+    </header>
+    <section class="container">
+      <p>This is a simple application aiming to improve synchronization between your facebook upcoming events and your google calendar!</p>
+      <h4>The story behind it</h4>
+      <p>I was tired of seeing random events in my google calendar after synchronizing it with facebook.<br/>I found this application <a href="http://eventcal.flown.io/">http://eventcal.flown.io/</a> and decided to implement a similar thing in nodeJS</a></p>
+    </section>
+    <section class="container">
+      <h4>What events would you like to synchronize?</h4>
+      <form>
+        <fieldset id="switches">
+          <label><label class="switch checked">
+            <i class="icon-ok"></i>
+            <i class="icon-remove"></i>
+            <input type="checkbox" id="acceptedEvents" checked>
+          </label>Accepted events</label>
+          <label><label class="switch checked">
+            <i class="icon-ok"></i>
+            <i class="icon-remove"></i>
+            <input type="checkbox" id="maybeEvents" checked>
+          </label>Maybe and interested</label>
+          <label><label class="switch">
+            <i class="icon-ok"></i>
+            <i class="icon-remove"></i>
+            <input type="checkbox" id="notRespondedEvents">
+          </label>Not responded</label>
+        </fieldset>
+        <fieldset>
+          <input type="text" id="fbCalendarUri" placeholder="Facebook calendar link">
+        </fieldset>
+      </form>
+      <h4>Your filtered calendar:</h4>
+      <p id="filteredCalendarUri" class="untouched">will be here</p>
+    </section>
+    <script src="/client.js" type="text/javascript"></script>
+    <script src="/switch.js" type="text/javascript"></script>
+  </body>
+</html>
