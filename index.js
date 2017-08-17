@@ -26,9 +26,9 @@ const getFbCal = ({uid, key}) => new Promise(resolve => {
     })
 })
 
-const filterCal = ({going, maybe, notResponded}) => jsonCal => {
+const filterCal = ({accepted, maybe, notResponded}) => jsonCal => {
   const acceptedPartstat = [
-    going && 'ACCEPTED',
+    accepted && 'ACCEPTED',
     maybe && 'TENTATIVE',
     notResponded && 'NEEDS-ACTION'
   ]
